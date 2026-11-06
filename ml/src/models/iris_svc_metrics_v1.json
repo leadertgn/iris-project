@@ -1,0 +1,17 @@
+{
+    "accuracy": 0.9333333333333333,
+    "features_names": [
+        "sepal length (cm)",
+        "sepal width (cm)",
+        "petal length (cm)",
+        "petal width (cm)"
+    ],
+    "classes_names": [
+        "setosa",
+        "versicolor",
+        "virginica"
+    ],
+    "version": 1,
+    "trained_on": "2026-11-06T19:11:48.785968",
+    "scikit-learn_version": "1.9.1"
+}
