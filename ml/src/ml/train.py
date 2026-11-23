@@ -1,9 +1,10 @@
 from sklearn.model_selection import train_test_split
+
 from . import config
 from .data import load_data
-from .pipeline import build_model
 from .evaluate import evaluate
 from .export import export_model_and_metadata
+from .pipeline import build_model
 
 
 def main():

@@ -1,7 +1,9 @@
-import joblib
 import json
-from . import config
+
+import joblib
 import pandas as pd
+
+from . import config
 
 _pipeline = joblib.load(config.MODEL_PATH)
 
