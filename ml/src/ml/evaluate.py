@@ -1,7 +1,8 @@
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-from . import config
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+
+
 def evaluate(pipeline, y_test, y_pred):
-    # score 
+    # score
     score = accuracy_score(y_true=y_test, y_pred=y_pred)
     print("Accuracy score : ", score)
 
@@ -17,4 +18,3 @@ def evaluate(pipeline, y_test, y_pred):
     print(clr)
 
     return score
-

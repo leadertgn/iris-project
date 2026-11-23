@@ -1,6 +1,7 @@
-import pandas as pd 
+import pandas as pd
 
 from . import config
+
 
 def load_data() : 
     df = pd.read_csv(config.DATA_PATH)

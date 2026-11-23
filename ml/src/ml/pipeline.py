@@ -1,9 +1,11 @@
-from sklearn.svm import SVC
+from sklearn.calibration import CalibratedClassifierCV
+from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.impute import SimpleImputer
-from sklearn.calibration import CalibratedClassifierCV
+from sklearn.svm import SVC
+
 from . import config
+
 
 def build_model():
     return Pipeline([

@@ -1,8 +1,11 @@
-from . import config
-import sklearn
+import json
 from datetime import datetime
+
 import joblib
-import json 
+import sklearn
+
+from . import config
+
 
 def export_model_and_metadata(model, metric, features_names):
     metadata = {
@@ -10,7 +13,7 @@ def export_model_and_metadata(model, metric, features_names):
         "features_names": features_names,
         "classes_names": model.classes_.tolist(),
         "version": config.MODEL_VERSION,
-        "trained_on": datetime.today().isoformat(),
+        "trained_on": datetime.now().isoformat(),
         "scikit-learn_version": sklearn.__version__
     }
     config.MODELS_DIR.mkdir(parents=True, exist_ok=True)
