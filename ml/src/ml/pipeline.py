@@ -8,9 +8,13 @@ from . import config
 
 
 def build_model():
-    return Pipeline([
-        ("imputer", SimpleImputer(strategy="median")),
-        ("scaler", StandardScaler()),
-        ("model", CalibratedClassifierCV(SVC(**config.MODEL_PARAMS), ensemble=False))
-    ])
-
+    return Pipeline(
+        [
+            ("imputer", SimpleImputer(strategy="median")),
+            ("scaler", StandardScaler()),
+            (
+                "model",
+                CalibratedClassifierCV(SVC(**config.MODEL_PARAMS), ensemble=False),
+            ),
+        ]
+    )
